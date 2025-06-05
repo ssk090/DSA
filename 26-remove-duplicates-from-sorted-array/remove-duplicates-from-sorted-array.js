@@ -3,15 +3,16 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    if (nums.length === 0) return 0;
-    // new change
-    let i = 0; // pointer for the position of the last unique element
-    for (let j = 1; j < nums.length; j++) {
-        if (nums[j] !== nums[i]) {
-            i++;            // move the unique pointer forward
-            nums[i] = nums[j]; // overwrite the next position with new unique element
-        }
+    if (nums.length == 0) {
+        return 0;
     }
 
-    return i + 1; // total count of unique elements
+    let left = 1;
+    for(let right = 1; right < nums.length; right++) {
+        if(nums[right] !== nums[right - 1]) {
+            nums[left] = nums[right];
+            left +=1;
+        }
+    }
+    return left;
 };
