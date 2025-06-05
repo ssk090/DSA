@@ -4,7 +4,7 @@
  */
 var removeDuplicates = function(nums) {
     if (nums.length === 0) return 0;
-
+    // new change
     let i = 0; // pointer for the position of the last unique element
     for (let j = 1; j < nums.length; j++) {
         if (nums[j] !== nums[i]) {
