@@ -20,13 +20,13 @@ var isValid = function (s) {
     // return stack.length === 0;
 
     // Solution 2
-    if (s.length % 2 !== 0) return false; 
     const stack = [];
     const map = {
         ')': '(',
         ']': '[',
         '}': '{'
     };
+    if (s.length % 2 !== 0) return false; 
 
     for (let char of s) {
         if (char === '(' || char === '[' || char === '{') {
