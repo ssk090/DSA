@@ -20,6 +20,7 @@ var isValid = function (s) {
     // return stack.length === 0;
 
     // Solution 2
+    if (s.length % 2 !== 0) return false; 
     const stack = [];
     const map = {
         ')': '(',
